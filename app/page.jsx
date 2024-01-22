@@ -1,6 +1,7 @@
-import Navbar from "./components/navbar";
-import SearchChar from "./components/searchchar";
-import "./page.css";
+import Navbar from "./components/navBar";
+import SearchChar from "./components/searchChar";
+import CardList from "./components/cardList";
+import "./page.scss";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         <h1>CHARACTERS</h1>
       </header>
       <SearchChar />
-      <main></main>
+      <main>
+        <CardList />
+      </main>
     </>
   );
 }

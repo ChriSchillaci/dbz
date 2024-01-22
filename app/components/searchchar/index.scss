@@ -1,0 +1,31 @@
+.SearchChar {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  margin-top: 26px;
+  padding: 0 40px;
+
+  & input {
+    width: 95%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 14px 0 10px 23px;
+    color: #828282;
+    background-color: #d9d9d9;
+    border-radius: 4px 0 0 4px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    background-color: #d9d9d9;
+    height: 100%;
+    width: 5%;
+    border-radius: 0 4px 4px 0;
+  }
+}
