@@ -1,3 +1,3 @@
 import SearchChar from "./SearchChar";
 
-export default SearchChar
+export default SearchChar;
