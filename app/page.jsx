@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SearchChar from "./components/searchChar/SearchChar";
+
 import CharList from "./components/charList";
 import Buttons from "./components/buttons";
+import SearchCharacter from "./components/searchCharacter";
 import "./page.scss";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
         <div className="rectangle"></div>
         <h1>CHARACTERS</h1>
       </header>
-      <SearchChar />
+      <SearchCharacter />
       <main>
         <CharList charData={charData} />
         <Buttons />
