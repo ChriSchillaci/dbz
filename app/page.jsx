@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SearchChar from "./components/searchChar";
-import CharList from "./components/charList";
-import Buttons from "./components/buttons";
+import SearchChar from "./components/SearchChar";
+import CharList from "./components/CharList";
+import Buttons from "./components/Buttons";
 import "./page.scss";
 
 export default function Home() {
