@@ -1,4 +1,4 @@
-import Char from "../Char";
+import Char from "../char";
 import "./index.scss";
 
 export const CharList = ({ charData }) => {
