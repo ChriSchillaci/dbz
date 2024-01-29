@@ -1,0 +1,28 @@
+@use "../../assets/scss/mixins";
+@use "../../assets/scss/variables";
+
+.Footer {
+  padding: 0 40px;
+  background-color: black;
+  color: variables.$primary-color;
+  &__info {
+    @include mixins.flex(row, space-between, center);
+    height: 123px;
+    border-bottom: 2px solid variables.$primary-color;
+    &__img-text {
+      @include mixins.flex(row, flex-start, center, 20px);
+      img {
+        height: 45px;
+        width: 45px;
+      }
+      &__text {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+      }
+    }
+    &__social {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,18 +1,20 @@
-.NavBar {
+@use "../../assets/scss/variables";
+
+.Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   padding: 10px 40px;
   background-color: black;
-  border-bottom: 5px solid #ffb200;
+  border-bottom: 5px solid variables.$primary-color;
 
   & img {
     height: 45px;
     width: 45px;
   }
 
-  .buttons {
+  .btns {
     display: flex;
     gap: 15px;
 
@@ -23,11 +25,11 @@
 
     & button:first-child {
       color: white;
-      background-color: #ffb200;
+      background-color: variables.$primary-color;
     }
 
     & button:last-child {
-      color: #ffb200;
+      color: variables.$primary-color;
       background-color: black;
     }
   }

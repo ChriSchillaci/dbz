@@ -1,0 +1,39 @@
+@mixin flex($dir: row, $just: flex-start, $align: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}

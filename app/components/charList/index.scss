@@ -1,0 +1,7 @@
+@use "../../assets/scss/mixins";
+
+.CharList {
+  @include mixins.flex(row, space-around);
+  gap: 47px 16px;
+  flex-wrap: wrap;
+}

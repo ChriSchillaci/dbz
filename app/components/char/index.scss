@@ -1,0 +1,24 @@
+@use "../../assets/scss/mixins";
+@use "../../assets/scss/variables";
+
+.Char {
+  width: 410px;
+  background: linear-gradient(180deg, #fcbd42 20.83%, #e76b24 100%);
+  cursor: pointer;
+
+  &__img {
+    width: 100%;
+    height: 196.837px;
+    object-fit: contain;
+    // object-position: top;
+  }
+
+  &__name {
+    @include mixins.flex(row, center, center);
+    height: 36px;
+    font-size: 20px;
+    font-weight: bold;
+    color: variables.$primary-color;
+    background-color: black;
+  }
+}
