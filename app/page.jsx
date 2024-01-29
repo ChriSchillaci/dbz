@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SearchChar from "./components/searchChar";
+import SearchChar from "./components/searchChar/SearchChar";
 import CharList from "./components/charList";
 import Buttons from "./components/buttons";
 import "./page.scss";
