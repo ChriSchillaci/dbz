@@ -4,10 +4,12 @@
 .Buttons {
   @include mixins.flex(row, center, center, 20px);
   margin-top: 40px;
-  &__btns-prev,
-  &__btns-next {
+
+  .btns-prev,
+  .btns-next {
     @include mixins.flex(row, flex-start, flex-start, 10px);
-    &__btn {
+
+    .btn-page {
       width: 25px;
       height: 25px;
       color: variables.$primary-color;

@@ -1,12 +1,14 @@
 import Char from "../char";
-import "./index.scss";
+import styles from "./index.module.scss";
 
-export const CharList = ({ charData }) => {
+const CharList = ({ charData }) => {
   return (
-    <ul className="CharList">
+    <ul className={styles.CharList}>
       {charData.map((char) => (
         <Char char={char} key={char.id} />
       ))}
     </ul>
   );
 };
+
+export default CharList;

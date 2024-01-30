@@ -1,6 +1,8 @@
 @use "../../assets/scss/variables";
 
 .Navbar {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +11,7 @@
   background-color: black;
   border-bottom: 5px solid variables.$primary-color;
 
-  & img {
+  .logo-img {
     height: 45px;
     width: 45px;
   }
@@ -18,17 +20,17 @@
     display: flex;
     gap: 15px;
 
-    & button {
+    &-btn {
       padding: 8px 16px;
       font-weight: 700;
     }
 
-    & button:first-child {
+    .home-btn {
       color: white;
       background-color: variables.$primary-color;
     }
 
-    & button:last-child {
+    .about-btn {
       color: variables.$primary-color;
       background-color: black;
     }

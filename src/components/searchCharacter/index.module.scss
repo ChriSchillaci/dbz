@@ -1,4 +1,4 @@
-.SearchChar {
+.SearchCharacter {
   display: flex;
   align-items: center;
   height: 48px;
@@ -6,7 +6,7 @@
   margin-top: 26px;
   padding: 0 40px;
 
-  & input {
+  &-input {
     width: 95%;
     height: 100%;
     border: none;

@@ -1,6 +1,6 @@
-@use "../app/assets/scss/variables";
+@use "../assets/scss/variables";
 
-header {
+.header-char {
   display: flex;
   align-items: center;
   gap: 19px;
@@ -13,13 +13,13 @@ header {
     background-color: variables.$primary-color;
   }
 
-  h1 {
+  .title {
     font-size: 4.375em;
     font-weight: 600;
   }
 }
 
-main {
+.sect-chars {
   padding: 0 40px;
   margin: 40px 0 45px 0;
 }

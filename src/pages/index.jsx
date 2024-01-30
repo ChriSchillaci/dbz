@@ -1,11 +1,8 @@
-"use client";
-
 import { useEffect, useState } from "react";
-
-import CharList from "./components/charList";
-import Buttons from "./components/buttons";
-import SearchCharacter from "./components/searchCharacter";
-import "./page.scss";
+import CharList from "../components/charList";
+import Buttons from "../components/buttons";
+import SearchCharacter from "../components/searchCharacter";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const [charData, setCharData] = useState([]);
@@ -18,15 +15,15 @@ export default function Home() {
 
   return (
     <>
-      <header>
-        <div className="rectangle"></div>
-        <h1>CHARACTERS</h1>
+      <header className={styles["header-char"]}>
+        <div className={styles.rectangle}></div>
+        <h1 className={styles.title}>CHARACTERS</h1>
       </header>
       <SearchCharacter />
-      <main>
+      <section className={styles["sect-chars"]}>
         <CharList charData={charData} />
         <Buttons />
-      </main>
+      </section>
     </>
   );
 }
