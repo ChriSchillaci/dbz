@@ -2,19 +2,44 @@
 @use "../../assets/scss/variables";
 
 .Char {
+  position: relative;
   width: 410px;
   background: linear-gradient(180deg, #fcbd42 20.83%, #e76b24 100%);
   cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.08);
+  }
 
   &-img {
     width: 100%;
-    height: 196.837px;
+    height: 232.837px;
     object-fit: contain;
-    // object-position: top;
+    object-position: 50% 60px;
+    transform: scale(2.5);
+  }
+
+  .img-hover {
+    position: absolute;
+    height: 232.837px;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .name {
     @include mixins.flex(row, center, center);
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
     height: 36px;
     font-size: 20px;
     font-weight: bold;
