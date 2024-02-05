@@ -1,0 +1,37 @@
+@use "../../assets/scss/mixins";
+@use "../../assets/scss/variables";
+
+.char-sect {
+  margin-top: 40px;
+  padding: 0 40px;
+
+  .char-info {
+    border-bottom: 2px solid variables.$primary-color;
+    padding-bottom: 10px;
+
+    .name {
+      font-size: 48px;
+    }
+
+    .name::before {
+      content: "";
+      border-left: 15px solid variables.$primary-color;
+      margin-right: 10px;
+    }
+
+    .race-gender {
+      font-size: 20px;
+    }
+  }
+
+  .char-planet {
+    @include mixins.flex(row, flex-start, flex-start, 15px);
+    padding: 15px 0;
+    .planet-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+}
