@@ -4,22 +4,7 @@ import Buttons from "../components/buttons";
 import SearchCharacter from "../components/searchCharacter";
 import styles from "../styles/Home.module.scss";
 
-export const metadata = {
-  title: "Home",
-};
-
-// export const getStaticProps = async () => {
-//   const res = await fetch(
-//     "https://dragonball-api.com/api/characters?page=1&limit=9"
-//   );
-//   const data = await res.json();
-
-//   return {
-//     props: { charsData: data.items },
-//   };
-// };
-
-export default function Home(/*{ charsData }*/) {
+export default function Home() {
   const [charsData, setCharData] = useState([]);
   const [inputName, setInputName] = useState("");
   const [page, setPage] = useState(1);
