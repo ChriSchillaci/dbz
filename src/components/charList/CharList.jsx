@@ -1,10 +1,10 @@
 import Char from "../char";
 import styles from "./index.module.scss";
 
-const CharList = ({ charData }) => {
+const CharList = ({ charsData }) => {
   return (
     <ul className={styles.CharList}>
-      {charData.map((char) => (
+      {charsData.map((char) => (
         <Char char={char} key={char.id} />
       ))}
     </ul>
