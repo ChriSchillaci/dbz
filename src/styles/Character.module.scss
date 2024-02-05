@@ -1,0 +1,36 @@
+@use "../assets/scss/mixins";
+@use "../assets/scss/variables";
+
+.char-container {
+  position: relative;
+  height: 388px;
+  .bg-img {
+    width: 100%;
+    height: 100%;
+  }
+  .char-img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: 320px;
+    object-fit: contain;
+  }
+
+  .stats-affil {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 52px;
+    min-width: 670px;
+    transform: translate(-50%);
+    @include mixins.flex(row, center, center);
+    background-color: black;
+    border-radius: 30px 30px 0 0;
+    .stat {
+      border-left: 4px solid variables.$primary-color;
+      color: variables.$primary-color;
+      font-weight: bold;
+      padding: 0 20px;
+    }
+  }
+}
