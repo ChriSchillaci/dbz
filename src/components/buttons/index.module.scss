@@ -5,16 +5,25 @@
   @include mixins.flex(row, center, center, 20px);
   margin-top: 40px;
 
+  .number-page {
+    font-weight: bold;
+  }
+
   .btns-prev,
   .btns-next {
     @include mixins.flex(row, flex-start, flex-start, 10px);
 
     .btn-page {
+      @include mixins.flex(row, center, center);
       width: 25px;
       height: 25px;
       color: variables.$primary-color;
       background-color: black;
       border-radius: 50%;
+
+      .arrow-icons {
+        font-size: 20px;
+      }
     }
   }
 }
