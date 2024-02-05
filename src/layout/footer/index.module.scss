@@ -4,27 +4,89 @@
 .Footer {
   position: relative;
   z-index: 1;
-  padding: 0 40px;
   background-color: black;
   color: variables.$primary-color;
-  .info {
-    @include mixins.flex(row, space-between, center);
-    height: 123px;
-    border-bottom: 2px solid variables.$primary-color;
-    .img-text {
-      @include mixins.flex(row, flex-start, center, 20px);
-      .ball-img {
-        height: 45px;
-        width: 45px;
+
+  &-wrapper {
+    padding: 0 40px;
+
+    .info {
+      @include mixins.flex(row, space-between, center);
+      height: 123px;
+      // padding: 37px 0;
+      border-bottom: 2px solid variables.$primary-color;
+
+      .img-text {
+        @include mixins.flex(row, flex-start, center, 20px);
+
+        .ball-img {
+          height: 45px;
+          width: 45px;
+        }
+
+        .text {
+          color: white;
+          font-size: 26px;
+          font-weight: bold;
+        }
       }
-      .text {
-        color: white;
+
+      .social {
         font-size: 26px;
-        font-weight: bold;
       }
     }
-    .social {
-      font-size: 26px;
+
+    .chars-pages {
+      @include mixins.flex(row, flex-start, flex-start, 25px);
+      width: 100%;
+      margin-top: 35px;
+
+      .chars {
+        width: 70%;
+
+        &-title {
+          padding-bottom: 5px;
+          border-bottom: 1px solid variables.$primary-color;
+        }
+
+        &-names {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          grid-template-rows: repeat(7, 1fr);
+          gap: 10px;
+          padding: 20px 0 40px 0;
+
+          .name {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .pages {
+        width: 30%;
+
+        &-title {
+          @extend .chars-title;
+        }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding-top: 20px;
+        }
+      }
     }
+  }
+
+  .developer {
+    @include mixins.flex(row, flex-start, center);
+    height: 38px;
+    background-color: variables.$primary-color;
+    color: black;
+    padding-left: 40px;
+    font-weight: bold;
   }
 }
