@@ -1,3 +1,5 @@
+@use "../../assets/scss/mixins";
+
 .SearchCharacter {
   display: flex;
   align-items: center;
@@ -7,12 +9,12 @@
   padding: 0 40px;
 
   &-input {
-    width: 95%;
+    width: 93%;
     height: 100%;
     border: none;
     font-size: 20px;
     font-weight: 700;
-    padding: 14px 0 10px 23px;
+    padding: 14px 20px;
     color: #828282;
     background-color: #d9d9d9;
     border-radius: 4px 0 0 4px;
@@ -21,11 +23,15 @@
       outline: none;
     }
   }
-
-  .search-icon {
-    background-color: #d9d9d9;
+  .search-btn {
+    @include mixins.flex(row, center, center);
     height: 100%;
-    width: 5%;
+    width: 7%;
+    background-color: #d9d9d9;
     border-radius: 0 4px 4px 0;
+
+    .search-icon {
+      font-size: 43px;
+    }
   }
 }
