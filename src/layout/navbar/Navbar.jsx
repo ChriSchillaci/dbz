@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./index.module.scss";
 
 const Navbar = () => {
@@ -9,12 +10,16 @@ const Navbar = () => {
         alt="logo"
       />
       <div className={styles.btns}>
-        <button className={`${styles["btns-btn"]} ${styles["home-btn"]}`}>
-          Home
-        </button>
-        <button className={`${styles["btns-btn"]} ${styles["about-btn"]}`}>
-          About
-        </button>
+        <Link href="/">
+          <button className={`${styles["btns-btn"]} ${styles["home-btn"]}`}>
+            Home
+          </button>
+        </Link>
+        <Link href="/about">
+          <button className={`${styles["btns-btn"]} ${styles["about-btn"]}`}>
+            About
+          </button>
+        </Link>
       </div>
     </nav>
   );
