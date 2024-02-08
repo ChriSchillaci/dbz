@@ -1,4 +1,8 @@
 import CharInfo from "@/components/charInfo";
+import Transformation from "@/components/transformation";
+import Head from "next/head";
+import { RiTeamFill } from "react-icons/ri";
+import { GiAura, GiBeamsAura } from "react-icons/gi";
 import styles from "../../styles/Character.module.scss";
 
 export const getStaticPaths = async () => {
@@ -25,6 +29,9 @@ export const getStaticProps = async (context) => {
 export default function Character({ charData }) {
   return (
     <>
+      <Head>
+        <title>{charData.name}</title>
+      </Head>
       <div className={styles["char-container"]}>
         <img
           className={styles["bg-img"]}
@@ -35,13 +42,36 @@ export default function Character({ charData }) {
           src={charData.image}
           alt={charData.name}
         />
-        <ul className={styles["stats-affil"]}>
-          <li className={styles.stat}>KI - {charData.ki}</li>
-          <li className={styles.stat}>MAXKI - {charData.maxKi}</li>
-          <li className={styles.stat}>AFFILIATION - {charData.affiliation}</li>
+        <ul className={styles.stats}>
+          <li className={styles["stat-wrapper"]}>
+            <GiAura className={styles["stat-icon"]} />
+            <p>
+              <span className={styles["stat-name"]}>KI - </span>
+              {charData.ki}
+            </p>
+          </li>
+          <li className={styles["stat-wrapper"]}>
+            <GiBeamsAura className={styles["stat-icon"]} />
+            <p>
+              <span className={styles["stat-name"]}>MAXKI - </span>
+              {charData.maxKi}
+            </p>
+          </li>
+          <li className={styles["stat-wrapper"]}>
+            <RiTeamFill className={styles["stat-icon"]} />
+            <p>
+              <span className={styles["stat-name"]}>AFFILIATION - </span>
+              {charData.affiliation}
+            </p>
+          </li>
         </ul>
       </div>
-      <CharInfo charData={charData} />
+      <div className={styles["info-wrapper"]}>
+        <CharInfo charData={charData} />
+        {charData.transformations.length ? (
+          <Transformation charData={charData} />
+        ) : null}
+      </div>
     </>
   );
 }
