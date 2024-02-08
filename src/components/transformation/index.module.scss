@@ -1,0 +1,43 @@
+@use "../../assets/scss/variables";
+@use "../../assets/scss/mixins";
+
+.Transformation {
+  margin-bottom: 20px;
+  color: variables.$primary-color;
+
+  &__title {
+    font-size: 26px;
+    padding: 5px 0 5px 30px;
+    background-color: black;
+  }
+
+  .slider {
+    margin: 20px auto;
+
+    .transformation-card {
+      position: relative;
+      height: 320px;
+      background: linear-gradient(180deg, #fcbd42 20.83%, #e76b24 100%);
+      //   width: 230px;
+
+      .transformation-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .transformation-name {
+        position: absolute;
+        bottom: 0;
+        @include mixins.flex(row, center, center);
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        height: 36px;
+        background-color: black;
+      }
+    }
+  }
+}
