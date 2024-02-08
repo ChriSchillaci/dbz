@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import CharList from "../components/charList";
 import Buttons from "../components/buttons";
 import SearchCharacter from "../components/searchCharacter";
 import styles from "../styles/Home.module.scss";
-
 export default function Home() {
   const [charsData, setCharData] = useState([]);
   const [inputName, setInputName] = useState("");
@@ -22,10 +22,10 @@ export default function Home() {
 
   return (
     <>
-      <header className={styles["header-char"]}>
-        <div className={styles.rectangle}></div>
-        <h1 className={styles.title}>CHARACTERS</h1>
-      </header>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <h1 className={styles.title}>CHARACTERS</h1>
       <SearchCharacter inputName={inputName} setInputName={setInputName} />
       <section className={styles["sect-chars"]}>
         <CharList charsData={charsData} />
