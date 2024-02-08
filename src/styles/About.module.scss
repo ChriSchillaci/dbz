@@ -1,0 +1,110 @@
+@use "../assets/scss/mixins.scss";
+@use "../assets/scss/variables.scss";
+
+.layout-bg-about-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .layout-bg-about {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.layout-bg-about-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 44%,
+    rgba(0, 0, 0, 0.82) 83%,
+    rgba(0, 0, 0, 0.59) 100%
+  );
+}
+
+.About {
+  position: relative;
+  min-height: 150vh;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 40px;
+  color: white;
+
+  .developer-img-wrapper {
+    padding-block: 100px;
+    @include mixins.flex(column, center, center);
+
+    .developer-img {
+      border: 10px solid #d22a00;
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+    }
+
+    .developer-profession {
+      font-size: 20px;
+    }
+  }
+
+  .intro {
+    .intro__title {
+      font-size: 48px;
+    }
+
+    .intro__title::before {
+      content: "";
+      margin-right: 20px;
+      border-left: 15px solid variables.$primary-color;
+    }
+  }
+
+  .languages-container {
+    position: relative;
+    margin: 50px auto;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 3%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 1) 97%
+      );
+    }
+
+    .languages {
+      @include mixins.flex(row, flex-start, center, 30px);
+      animation: horizontal-scroll 20s linear infinite;
+
+      .language {
+        width: 70px;
+      }
+    }
+  }
+}
+
+@keyframes horizontal-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 5%));
+  }
+}

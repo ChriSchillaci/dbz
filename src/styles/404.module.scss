@@ -1,0 +1,50 @@
+@use "../assets/scss/mixins";
+@use "../assets/scss/variables";
+
+.NotFound {
+  min-height: 100vh;
+  @include mixins.flex(column, center, center);
+
+  .error-wrapper {
+    @include mixins.flex(column, center, center, 20px);
+
+    .img-wrapper {
+      position: relative;
+      animation: gliding 3s linear infinite;
+
+      .error-number {
+        position: absolute;
+        font-size: 167px;
+        transform: rotate(6deg) translateY(-135px) translateX(50px);
+      }
+
+      .cloud-img {
+        position: relative;
+        z-index: 1;
+        width: 500px;
+      }
+    }
+  }
+
+  .error-text {
+    text-align: center;
+  }
+
+  .goback-btn {
+    padding: 15px 20px;
+    background-color: black;
+    color: variables.$primary-color;
+  }
+}
+
+@keyframes gliding {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
