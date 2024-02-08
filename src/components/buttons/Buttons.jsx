@@ -10,8 +10,7 @@ const Buttons = ({ page, setPage }) => {
   const handlePageBtn = (type) => {
     if (type === "decrement" && page === 1) setPage(7);
     else if (type === "increment" && page === 7) setPage(1);
-    else if (type === "decrement" && page >= 2 && 6 <= page)
-      setPage((prev) => --prev);
+    else if (type === "decrement") setPage((prev) => --prev);
     else setPage((prev) => ++prev);
   };
 
