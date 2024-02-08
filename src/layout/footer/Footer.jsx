@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { socialIcons } from "@/mocks/social-icons";
 import styles from "./index.module.scss";
 
 const Footer = () => {
@@ -22,7 +23,16 @@ const Footer = () => {
             />
             <p className={styles.text}>DRAGON BALL</p>
           </div>
-          <h3 className={styles.social}>Socials</h3>
+          <div className={styles.socials}>
+            <h3 className={styles["social-text"]}>Socials</h3>
+            <ul className={styles["social-icons"]}>
+              {socialIcons.map((icon, idx) => (
+                <li key={idx}>
+                  <Link href={icon.link}>{icon.icon}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className={styles["chars-pages"]}>
           <div className={styles.chars}>

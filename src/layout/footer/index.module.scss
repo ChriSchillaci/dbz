@@ -13,7 +13,6 @@
     .info {
       @include mixins.flex(row, space-between, center);
       height: 123px;
-      // padding: 37px 0;
       border-bottom: 2px solid variables.$primary-color;
 
       .img-text {
@@ -31,8 +30,13 @@
         }
       }
 
-      .social {
-        font-size: 26px;
+      .socials {
+        .social-text {
+          font-size: 26px;
+        }
+        .social-icons {
+          @include mixins.flex("row", flex-start, flex-start, 5px);
+        }
       }
     }
 
@@ -53,11 +57,10 @@
           display: grid;
           grid-template-columns: repeat(8, 1fr);
           grid-template-rows: repeat(7, 1fr);
-          gap: 10px;
+          gap: 20px 10px;
           padding: 20px 0 40px 0;
 
           .name {
-            text-align: center;
             font-size: 14px;
             font-weight: bold;
           }
@@ -72,9 +75,7 @@
         }
 
         .links {
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
+          @include mixins.flex(column, flex-start, flex-start, 20px);
           padding-top: 20px;
         }
       }
