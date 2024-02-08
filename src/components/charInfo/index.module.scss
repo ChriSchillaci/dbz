@@ -2,8 +2,7 @@
 @use "../../assets/scss/variables";
 
 .char-sect {
-  margin-top: 40px;
-  padding: 0 40px;
+  margin: 40px 0 20px 0;
 
   .char-info {
     border-bottom: 2px solid variables.$primary-color;
