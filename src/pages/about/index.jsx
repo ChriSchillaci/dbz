@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { languageIcons } from "@/mocks/languages-icons";
+import Marquee from "react-fast-marquee";
 import styles from "../../styles/About.module.scss";
 
 export default function About() {
@@ -19,55 +20,69 @@ export default function About() {
         <div className={styles["developer-img-wrapper"]}>
           <img
             className={styles["developer-img"]}
-            src="https://picsum.photos/220"
-            alt=""
+            src="/images/foto-profilo.jpg"
+            alt="foto profilo"
           />
           <p className={styles["developer-profession"]}>Front-end Developer</p>
         </div>
         <section className={styles.intro}>
-          <h1 className={styles["intro__title"]}>Who am I?</h1>
+          <h1 className={styles["intro-title"]}>Who am I?</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            minus rem labore autem commodi optio odit distinctio fugiat
-            similique repellat alias, corrupti deleniti maxime sed, sunt nam
-            officia consectetur. Rem, eum modi rerum accusamus itaque
-            recusandae. Nam molestiae eveniet eius inventore reiciendis esse
-            quo, consequuntur architecto temporibus tenetur et, aspernatur eos!
-            Aliquam excepturi quidem commodi nesciunt a quibusdam eos
-            necessitatibus obcaecati facere reprehenderit laudantium praesentium
-            possimus quo inventore temporibus, fugit blanditiis molestiae eum
-            nemo magni adipisci consectetur nulla error cumque. Adipisci officia
-            tenetur corporis porro ipsum, assumenda necessitatibus commodi ea,
-            eveniet hic nam quidem ullam dignissimos perspiciatis accusamus
-            maxime incidunt.
+            I am Schillaci Christian, and I began my journey into the world of
+            programming in 2023.
+            <br />
+            <br />
+            I've always been fascinated by computers and technology, therefore,
+            I decided to start learning programming languages, and since then I
+            haven't stopped. I started studying on my own by reading books,
+            attending Udemy courses, and watching tutorials on Youtube in order
+            to deepen my knowledge throughout the months. It's been a difficult
+            journey at first, but thanks to my continuous commitment, I was able
+            to overcome my difficulties and achieve good results that even I
+            couldn't imagine.
+            <br />
+            <br />
+            I have acquired knowledge in different programming languages, from
+            HTML5 and CSS to Javascript and React, and I had the opportunity to
+            put into practice my skills in various personal projects, including
+            this one.
+            <br />
+            <br />I am delighted I achieved these results in less than a year,
+            and I won't certainly stop learning. Let's see what the future has
+            in store for me.
           </p>
         </section>
-        <div className={styles["languages-container"]}>
-          <div className={styles["languages-container-overlay"]}></div>
-          <div className={styles.languages}>
-            {languageIcons.map((icon) => (
-              <img className={styles.language} src={icon.link} alt={icon.alt} />
-            ))}
-          </div>
-        </div>
+        <Marquee
+          className={styles["languages-container"]}
+          direction="left"
+          gradient={true}
+          gradientColor={"black"}
+          autoFill={true}
+        >
+          {languageIcons.map((language, idx) => (
+            <img
+              className={styles["language-icon"]}
+              src={language.link}
+              alt={language.alt}
+              key={idx}
+            />
+          ))}
+        </Marquee>
         <section className={styles.intro}>
-          <h1 className={styles["intro__title"]}>
-            Project info / Technologies used etc...
-          </h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-            cupiditate soluta eaque iste animi possimus laboriosam quo eligendi
-            non enim corrupti aperiam fugiat quas ad quam sunt natus obcaecati,
-            sequi accusantium maxime suscipit voluptates. Enim deserunt earum
-            itaque repellendus, id aperiam neque fugiat vel, adipisci ipsam
-            quidem? Porro nobis sapiente minus. Corrupti doloremque possimus
-            explicabo officiis placeat quidem, laborum voluptatem eveniet
-            reprehenderit sequi, aspernatur excepturi blanditiis, sapiente
-            perspiciatis minus perferendis odit. Repellat omnis libero iure
-            obcaecati consectetur accusantium odio quisquam maiores quibusdam
-            quo, ea fuga voluptatem tempora rerum provident maxime, porro illum
-            incidunt amet quidem rem! Doloremque quasi cumque nihil.
-          </p>
+          <h1 className={styles["intro-title"]}>About the project</h1>
+          <p>These are the technologies I used during development:</p>
+          <ul className={styles["intro-list"]}>
+            <li>HTML5</li>
+            <li>Sass</li>
+            <li>Javascript</li>
+            <li>Next.js</li>
+          </ul>
+          <p>The libraries:</p>
+          <ul className={styles["intro-list"]}>
+            <li>CSS modules</li>
+            <li>Swiper</li>
+            <li>React-Fast-Marquee</li>
+          </ul>
         </section>
       </div>
     </>
