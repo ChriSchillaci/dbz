@@ -2,7 +2,7 @@
 @use "../assets/scss/variables";
 
 .NotFound {
-  min-height: 100vh;
+  height: calc(100vh - 80px);
   @include mixins.flex(column, center, center);
 
   .error-wrapper {
@@ -11,28 +11,51 @@
     .img-wrapper {
       position: relative;
       animation: gliding 3s linear infinite;
+      width: 400px;
+
+      @include mixins.breakpoint(tablet) {
+        width: 300px;
+      }
+
+      @include mixins.breakpoint(mobile) {
+        width: 250px;
+      }
 
       .error-number {
         position: absolute;
         font-size: 167px;
-        transform: rotate(6deg) translateY(-135px) translateX(50px);
+        transform: rotate(8deg) translateY(-135px) translateX(10px);
+
+        @include mixins.breakpoint(tablet) {
+          font-size: 127px;
+          transform: rotate(10deg) translateY(-100px) translateX(1px);
+        }
+
+        @include mixins.breakpoint(mobile) {
+          font-size: 107px;
+          transform: rotate(10deg) translateY(-90px) translateX(0px);
+        }
       }
 
       .cloud-img {
         position: relative;
         z-index: 1;
-        width: 500px;
       }
     }
   }
 
-  .error-text {
+  .error-text-wrapper {
     text-align: center;
+
+    .error-text {
+      font-size: 32px;
+    }
   }
 
   .goback-btn {
     padding: 15px 20px;
     background-color: black;
+    font-weight: bold;
     color: variables.$primary-color;
   }
 }
@@ -48,3 +71,13 @@
     transform: translateY(0);
   }
 }
+
+// @include mixins.breakpoint(tablet) {
+//   .img-wrapper {
+//     width: 300px !important;
+//     .error-number {
+//       font-size: 127px !important;
+//       transform: rotate(10deg) translateY(-100px) translateX(1px) !important;
+//     }
+//   }
+// }
