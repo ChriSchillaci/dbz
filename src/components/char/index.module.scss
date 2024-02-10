@@ -3,8 +3,9 @@
 
 .Char {
   position: relative;
-  width: 410px;
+  min-width: 375px;
   height: 232.837px;
+  flex: 1;
   background: linear-gradient(180deg, #fcbd42 20.83%, #e76b24 100%);
   cursor: pointer;
   overflow: hidden;
