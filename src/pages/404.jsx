@@ -18,8 +18,8 @@ export default function NotFound() {
               alt="cloud"
             />
           </div>
-          <div className={styles["error-text"]}>
-            <h4>Page not found</h4>
+          <div className={styles["error-text-wrapper"]}>
+            <h4 className={styles["error-text"]}>Page not found</h4>
             <p>The page you were looking for does not exist.</p>
           </div>
           <Link href="/">
