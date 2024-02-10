@@ -13,18 +13,22 @@ const Transformation = ({ charData }) => {
         <Swiper
           modules={[Navigation, EffectCoverflow]}
           effect="coverflow"
+          grabCursor={true}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={1}
           loop={true}
-          centeredSlides={true}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
             depth: 70,
           }}
           navigation
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          breakpoints={{
+            768: {
+              slidesPerView: 3,
+              centeredSlides: false,
+            },
+          }}
         >
           {transformations.map((transformation) => (
             <SwiperSlide key={transformation.id}>
