@@ -23,16 +23,13 @@ const Footer = () => {
             />
             <p className={styles.text}>DRAGON BALL</p>
           </div>
-          <div className={styles.socials}>
-            <h3 className={styles["social-text"]}>Socials</h3>
-            <ul className={styles["social-icons"]}>
-              {socialIcons.map((icon, idx) => (
-                <li key={idx}>
-                  <Link href={icon.link}>{icon.icon}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className={styles["social-icons"]}>
+            {socialIcons.map((icon, idx) => (
+              <li key={idx}>
+                <Link href={icon.link}>{icon.icon}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className={styles["chars-pages"]}>
           <div className={styles.chars}>
