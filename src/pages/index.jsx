@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(
-      `https://dragonball-api.com/api/characters?page=${page}&limit=9&name=${inputName}`
+      `https://dragonball-api.com/api/characters?page=${page}&limit=12&name=${inputName}`
     )
       .then((res) => res.json())
       .then((data) => {
