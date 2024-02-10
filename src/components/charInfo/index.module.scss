@@ -10,6 +10,14 @@
 
     .name {
       font-size: 48px;
+
+      @include mixins.breakpoint(tablet) {
+        font-size: 40px;
+      }
+
+      @include mixins.breakpoint(mobile) {
+        font-size: 40px;
+      }
     }
 
     .name::before {
@@ -26,11 +34,21 @@
   .char-planet {
     @include mixins.flex(row, flex-start, flex-start, 15px);
     padding: 15px 0;
+
+    @include mixins.breakpoint(mobile) {
+      @include mixins.flex(column);
+    }
+
     .planet-img {
       width: 200px;
       height: 200px;
       border-radius: 4px;
       object-fit: cover;
+
+      @include mixins.breakpoint(mobile) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
