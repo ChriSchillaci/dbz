@@ -8,8 +8,8 @@ import styles from "./index.module.scss";
 
 const Buttons = ({ page, setPage }) => {
   const handlePageBtn = (type) => {
-    if (type === "decrement" && page === 1) setPage(7);
-    else if (type === "increment" && page === 7) setPage(1);
+    if (type === "decrement" && page === 1) setPage(5);
+    else if (type === "increment" && page === 5) setPage(1);
     else if (type === "decrement") setPage((prev) => --prev);
     else setPage((prev) => ++prev);
   };
@@ -29,7 +29,7 @@ const Buttons = ({ page, setPage }) => {
       </div>
       <p>
         Page <span className={styles["number-page"]}>{page}</span> of{" "}
-        <span className={styles["number-page"]}>7</span>
+        <span className={styles["number-page"]}>5</span>
       </p>
       <div className={styles["btns-next"]}>
         <button
