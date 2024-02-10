@@ -15,14 +15,14 @@
 
     .btn-page {
       @include mixins.flex(row, center, center);
-      width: 25px;
-      height: 25px;
+      width: 32px;
+      height: 32px;
       color: variables.$primary-color;
       background-color: black;
       border-radius: 50%;
 
       .arrow-icons {
-        font-size: 20px;
+        font-size: 26px;
       }
     }
   }
