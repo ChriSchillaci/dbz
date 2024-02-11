@@ -25,6 +25,7 @@
         font-size: 26px;
         &__disabled {
           opacity: 0.5;
+          cursor: default;
         }
       }
     }
