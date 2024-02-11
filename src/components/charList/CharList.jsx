@@ -4,9 +4,9 @@ import styles from "./index.module.scss";
 const CharList = ({ charsData }) => {
   return (
     <ul className={styles.CharList}>
-      {charsData.map((char) => (
-        <Char char={char} key={char.id} />
-      ))}
+      {charsData.items
+        ? charsData.items.map((char) => <Char char={char} key={char.id} />)
+        : charsData.map((char) => <Char char={char} key={char.id} />)}
     </ul>
   );
 };
