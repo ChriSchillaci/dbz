@@ -41,8 +41,24 @@
       width: 100%;
       margin-top: 35px;
 
+      @include mixins.breakpoint(tablet) {
+        @include mixins.flex(column, flex-start, flex-start, 0);
+      }
+
+      @include mixins.breakpoint(mobile) {
+        @include mixins.flex(column, flex-start, flex-start, 0);
+      }
+
       .chars {
         width: 70%;
+
+        @include mixins.breakpoint(tablet) {
+          width: 100%;
+        }
+
+        @include mixins.breakpoint(mobile) {
+          width: 100%;
+        }
 
         &-title {
           padding-bottom: 5px;
@@ -71,13 +87,21 @@
       .pages {
         width: 30%;
 
+        @include mixins.breakpoint(tablet) {
+          width: 100%;
+        }
+
+        @include mixins.breakpoint(mobile) {
+          width: 100%;
+        }
+
         &-title {
           @extend .chars-title;
         }
 
         .links {
           @include mixins.flex(column, flex-start, flex-start, 20px);
-          padding-top: 20px;
+          padding-block: 20px;
         }
       }
     }
@@ -92,9 +116,3 @@
     font-weight: bold;
   }
 }
-
-// @include mixins.breakpoint(mobile) {
-//   .chars-names {
-//     grid-template-columns: repeat(3, 1fr) !important;
-//   }
-// }
