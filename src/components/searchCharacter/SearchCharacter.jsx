@@ -7,7 +7,10 @@ const SearchCharacter = ({ inputName, setInputName }) => {
   };
 
   return (
-    <form className={styles.SearchCharacter}>
+    <form
+      onSubmit={(e) => e.preventDefault()}
+      className={styles.SearchCharacter}
+    >
       <input
         className={styles["SearchCharacter-input"]}
         type="text"
