@@ -33,7 +33,7 @@
     @include mixins.breakpoint(tablet) {
       height: auto;
       min-width: auto;
-      width: 70%;
+      width: calc(100% - 40px);
       flex-direction: column;
       align-items: flex-start;
       padding: 10px 20px;
@@ -41,7 +41,7 @@
     @include mixins.breakpoint(mobile) {
       height: auto;
       min-width: auto;
-      width: 70%;
+      width: calc(100% - 40px);
       flex-direction: column;
       align-items: flex-start;
       padding: 10px 20px;
@@ -65,5 +65,5 @@
 .info-wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding-inline: 40px;
+  padding-inline: 20px;
 }
