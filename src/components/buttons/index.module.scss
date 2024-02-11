@@ -23,6 +23,9 @@
 
       .arrow-icons {
         font-size: 26px;
+        &__disabled {
+          opacity: 0.5;
+        }
       }
     }
   }
