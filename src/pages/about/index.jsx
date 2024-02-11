@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { languageIcons } from "@/mocks/languages-icons";
 import Marquee from "react-fast-marquee";
 import styles from "../../styles/About.module.scss";
@@ -23,7 +24,12 @@ export default function About() {
             src="/images/foto-profilo.jpg"
             alt="foto profilo"
           />
-          <p className={styles["developer-profession"]}>Front-end Developer</p>
+          <div className={styles["developer-info"]}>
+            <p className={styles["developer-name"]}>Schillaci Christian</p>
+            <p className={styles["developer-profession"]}>
+              Front-end Developer
+            </p>
+          </div>
         </div>
         <section className={styles.intro}>
           <h1 className={styles["intro-title"]}>Who am I?</h1>
@@ -70,6 +76,13 @@ export default function About() {
         </Marquee>
         <section className={styles.intro}>
           <h1 className={styles["intro-title"]}>About the project</h1>
+          <p className={styles["intro-api"]}>
+            You can find the API I used in the following url:{" "}
+            <Link href="https://web.dragonball-api.com/">
+              https://web.dragonball-api.com/
+            </Link>
+            {" (Spanish only)"}
+          </p>
           <p>These are the technologies I used during development:</p>
           <ul className={styles["intro-list"]}>
             <li>HTML5</li>
@@ -81,7 +94,8 @@ export default function About() {
           <ul className={styles["intro-list"]}>
             <li>CSS modules</li>
             <li>Swiper</li>
-            <li>React-Fast-Marquee</li>
+            <li>React Fast Marquee</li>
+            <li>React Icons</li>
           </ul>
         </section>
       </div>
