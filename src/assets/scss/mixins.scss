@@ -1,3 +1,5 @@
+@use "./variables";
+
 @mixin flex($dir: row, $just: flex-start, $align: flex-start, $gap: 0) {
   display: flex;
   flex-direction: $dir;
@@ -27,5 +29,12 @@
     @media (min-width: 1201px) {
       @content;
     }
+  }
+}
+
+@mixin activeBtn {
+  .active-btn {
+    color: white;
+    background-color: variables.$primary-color;
   }
 }
