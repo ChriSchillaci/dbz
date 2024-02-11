@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { MdMenu } from "react-icons/md";
+import { RxCross1 } from "react-icons/rx";
 import styles from "./index.module.scss";
 
 const Navbar = ({ isBtnActive }) => {
@@ -40,8 +41,12 @@ const Navbar = ({ isBtnActive }) => {
             </button>
           </Link>
         </div>
-        <button className={styles["burger-icon--btn"]} onClick={handleDropdown}>
-          <MdMenu className={styles["burger-icon"]} />
+        <button className={styles["menu-icon--btn"]} onClick={handleDropdown}>
+          {!isDropdownActive ? (
+            <MdMenu className={styles["menu-icon"]} />
+          ) : (
+            <RxCross1 className={styles["menu-icon"]} />
+          )}
         </button>
       </nav>
       <div
@@ -53,6 +58,7 @@ const Navbar = ({ isBtnActive }) => {
           className={`${styles["dropdown-list__btn"]} ${
             isBtnActive ? styles["active-btn"] : ""
           }`}
+          onClick={handleDropdown}
         >
           <Link href="/">Home</Link>
         </button>
@@ -60,6 +66,7 @@ const Navbar = ({ isBtnActive }) => {
           className={`${styles["dropdown-list__btn"]} ${
             !isBtnActive ? styles["active-btn"] : ""
           }`}
+          onClick={handleDropdown}
         >
           <Link href="/about">About</Link>
         </button>

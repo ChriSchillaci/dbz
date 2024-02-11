@@ -46,7 +46,7 @@
     @include mixins.activeBtn;
   }
 
-  .burger-icon--btn {
+  .menu-icon--btn {
     display: none;
     color: black;
     background-color: variables.$primary-color;
@@ -60,7 +60,7 @@
       display: block;
     }
 
-    .burger-icon {
+    .menu-icon {
       font-size: 32px;
     }
   }
