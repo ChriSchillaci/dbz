@@ -33,7 +33,7 @@
 
   .char-planet {
     @include mixins.flex(row, flex-start, flex-start, 15px);
-    padding: 15px 0;
+    padding-top: 15px;
 
     @include mixins.breakpoint(mobile) {
       @include mixins.flex(column);
