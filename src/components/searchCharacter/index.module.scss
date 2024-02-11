@@ -6,7 +6,15 @@
   height: 48px;
   width: 100%;
   margin-top: 26px;
-  padding: 0 40px;
+  padding-inline: 40px;
+
+  @include mixins.breakpoint(tablet) {
+    padding-inline: 20px;
+  }
+
+  @include mixins.breakpoint(mobile) {
+    padding-inline: 20px;
+  }
 
   &-input {
     width: 93%;
