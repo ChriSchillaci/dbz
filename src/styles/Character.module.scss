@@ -4,6 +4,7 @@
 .char-container {
   position: relative;
   height: 388px;
+  margin-top: 80px;
   .bg-img {
     width: 100%;
     height: 100%;
@@ -32,6 +33,7 @@
     @include mixins.breakpoint(tablet) {
       height: auto;
       min-width: auto;
+      width: 70%;
       flex-direction: column;
       align-items: flex-start;
       padding: 10px 20px;
@@ -39,6 +41,7 @@
     @include mixins.breakpoint(mobile) {
       height: auto;
       min-width: auto;
+      width: 70%;
       flex-direction: column;
       align-items: flex-start;
       padding: 10px 20px;

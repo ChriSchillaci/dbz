@@ -35,10 +35,11 @@
   max-width: 1400px;
   margin-inline: auto;
   padding-inline: 40px;
+  padding-bottom: 40px;
   color: white;
 
   .developer-img-wrapper {
-    padding: 70px 0 40px 0;
+    padding: 150px 0 40px 0;
     @include mixins.flex(column, center, center);
 
     .developer-img {
@@ -50,8 +51,14 @@
       object-position: -33px 0;
     }
 
-    .developer-profession {
+    .developer-info {
+      padding-top: 10px;
       font-size: 20px;
+      text-align: center;
+
+      .developer-profession {
+        font-size: 14px;
+      }
     }
   }
 
@@ -80,6 +87,9 @@
       @include mixins.breakpoint(mobile) {
         border-left: 10px solid variables.$primary-color;
       }
+    }
+    &-api {
+      padding-block: 10px;
     }
 
     &-list {

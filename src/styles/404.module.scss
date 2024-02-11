@@ -3,6 +3,7 @@
 
 .NotFound {
   height: calc(100vh - 80px);
+  margin-top: 80px;
   @include mixins.flex(column, center, center);
 
   .error-wrapper {

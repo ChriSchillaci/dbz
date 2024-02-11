@@ -38,6 +38,10 @@ svg {
   -webkit-user-drag: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   line-height: 1.5;
