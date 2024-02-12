@@ -38,6 +38,14 @@
   padding-bottom: 40px;
   color: white;
 
+  @include mixins.breakpoint(tablet) {
+    padding-inline: 20px;
+  }
+
+  @include mixins.breakpoint(mobile) {
+    padding-inline: 20px;
+  }
+
   .developer-img-wrapper {
     padding: 150px 0 40px 0;
     @include mixins.flex(column, center, center);
