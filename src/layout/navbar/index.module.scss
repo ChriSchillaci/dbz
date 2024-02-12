@@ -48,8 +48,8 @@
 
   .menu-icon--btn {
     display: none;
-    color: black;
-    background-color: variables.$primary-color;
+    color: variables.$primary-color;
+    background-color: black;
     height: 100%;
     padding-inline: 20px;
 
@@ -70,7 +70,8 @@
   display: none;
   position: fixed;
   top: 0;
-  height: 110px;
+  height: 120px;
+  padding-bottom: 10px;
   width: 100%;
   transform: translateY(-30px);
   transition: transform 0.2s ease-out;
@@ -85,15 +86,20 @@
     @include mixins.flex(column, flex-start, flex-start);
   }
 
-  .dropdown-list__btn {
+  .dropdown-list__link {
     @include mixins.flex(row, flex-start, center);
     width: 100%;
     height: 100%;
     padding-left: 20px;
-    font-size: 21px;
-    font-weight: bold;
-    color: variables.$primary-color;
     background-color: black;
+    color: variables.$primary-color;
+
+    .dropdown-list__btn {
+      font-weight: bold;
+      font-size: 21px;
+      background-color: transparent;
+      color: inherit;
+    }
   }
 
   @include mixins.activeBtn;
