@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-
   return (
     <>
       {router.pathname !== "/about" ? (
@@ -15,13 +14,8 @@ export default function App({ Component, pageProps }) {
         />
       ) : null}
       <Navbar
-        isBtnActive={
-          router.pathname === "/" ||
-          router.pathname === "/character/[id]" ||
-          router.pathname === "/404"
-            ? true
-            : false
-        }
+        currentPage={router.pathname}
+        isBtnActive={router.pathname !== "/about" ? true : false}
       />
       <main
         className={`dbz-main ${

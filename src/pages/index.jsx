@@ -35,9 +35,9 @@ export default function Home() {
             COULDN'T FIND ANY CHARACTER
           </p>
         )}
-        {!inputName ? (
+        {!inputName && (
           <Buttons charsData={charsData} page={page} setPage={setPage} />
-        ) : null}
+        )}
       </section>
     </>
   );
