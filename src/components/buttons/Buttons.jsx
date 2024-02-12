@@ -4,81 +4,62 @@ import {
   MdOutlineKeyboardDoubleArrowLeft,
   MdOutlineKeyboardDoubleArrowRight,
 } from "react-icons/md";
+import { handlePageBtn } from "@/utils/handle_page";
 import styles from "./index.module.scss";
 
 const Buttons = ({ charsData, page, setPage }) => {
-  const handlePageBtn = (type) => {
-    if (type === "decrement") {
-      setPage((prev) => --prev);
-      window.scrollBy(0, -4000);
-    } else if (type === "increment") {
-      setPage((prev) => ++prev);
-      window.scrollBy(0, -4000);
-    } else if (type === "dbl-decrement") {
-      window.scrollBy(0, -4000);
-      setPage(1);
-    } else {
-      window.scrollBy(0, -4000);
-      setPage(charsData.meta?.totalPages);
-    }
-  };
+  const { totalPages } = charsData.meta || {};
 
   return (
     <div className={styles.Buttons}>
       <div className={styles["btns-prev"]}>
         <button
           className={styles["btn-page"]}
-          disabled={page === 1 ? true : false}
-          onClick={() => handlePageBtn("dbl-decrement")}
+          disabled={page === 1}
+          onClick={() => handlePageBtn("dbl-decrement", setPage)}
         >
           <MdOutlineKeyboardDoubleArrowLeft
             className={`${styles["arrow-icons"]} ${
-              page === 1 ? styles["arrow-icons__disabled"] : ""
+              page === 1 && styles["arrow-icons__disabled"]
             }`}
           />
         </button>
         <button
           className={styles["btn-page"]}
-          disabled={page === 1 ? true : false}
-          onClick={() => handlePageBtn("decrement")}
+          disabled={page === 1}
+          onClick={() => handlePageBtn("decrement", setPage)}
         >
           <MdOutlineKeyboardArrowLeft
             className={`${styles["arrow-icons"]} ${
-              page === 1 ? styles["arrow-icons__disabled"] : ""
+              page === 1 && styles["arrow-icons__disabled"]
             }`}
           />
         </button>
       </div>
       <p>
         Page <span className={styles["number-page"]}>{page}</span> of{" "}
-        <span className={styles["number-page"]}>
-          {charsData.meta?.totalPages}
-        </span>
+        <span className={styles["number-page"]}>{totalPages}</span>
       </p>
       <div className={styles["btns-next"]}>
         <button
           className={styles["btn-page"]}
-          disabled={page === charsData.meta?.totalPages ? true : false}
-          onClick={() => handlePageBtn("increment")}
+          disabled={page === totalPages}
+          onClick={() => handlePageBtn("increment", setPage)}
         >
           <MdOutlineKeyboardArrowRight
             className={`${styles["arrow-icons"]} ${
-              page === charsData.meta?.totalPages
-                ? styles["arrow-icons__disabled"]
-                : ""
+              page === totalPages && styles["arrow-icons__disabled"]
             }`}
           />
         </button>
         <button
           className={styles["btn-page"]}
-          disabled={page === charsData.meta?.totalPages}
-          onClick={() => handlePageBtn("dbl-increment")}
+          disabled={page === totalPages}
+          onClick={() => handlePageBtn("dbl-increment", setPage, totalPages)}
         >
           <MdOutlineKeyboardDoubleArrowRight
             className={`${styles["arrow-icons"]} ${
-              page === charsData.meta?.totalPages
-                ? styles["arrow-icons__disabled"]
-                : ""
+              page === totalPages && styles["arrow-icons__disabled"]
             }`}
           />
         </button>
