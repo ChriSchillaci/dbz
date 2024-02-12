@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MdMenu } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import styles from "./index.module.scss";
 
-const Navbar = ({ isBtnActive }) => {
+const Navbar = ({ isBtnActive, currentPage }) => {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
+
+  useEffect(() => {
+    setIsDropdownActive((prev) => (prev ? false : null));
+  }, [currentPage]);
 
   const handleDropdown = () => {
     setIsDropdownActive((prev) => !prev);
@@ -25,7 +29,7 @@ const Navbar = ({ isBtnActive }) => {
           <Link href="/">
             <button
               className={`${styles["btns-btn"]} ${
-                isBtnActive ? styles["active-btn"] : ""
+                isBtnActive && styles["active-btn"]
               }`}
             >
               Home
@@ -34,7 +38,7 @@ const Navbar = ({ isBtnActive }) => {
           <Link href="/about">
             <button
               className={`${styles["btns-btn"]} ${
-                !isBtnActive ? styles["active-btn"] : ""
+                !isBtnActive && styles["active-btn"]
               }`}
             >
               About
@@ -51,25 +55,35 @@ const Navbar = ({ isBtnActive }) => {
       </nav>
       <div
         className={`${styles["dropdown-list"]} ${
-          isDropdownActive ? styles["dropdown-list__active"] : ""
+          isDropdownActive && styles["dropdown-list__active"]
         }`}
       >
-        <button
-          className={`${styles["dropdown-list__btn"]} ${
-            isBtnActive ? styles["active-btn"] : ""
+        <Link
+          className={`${styles["dropdown-list__link"]} ${
+            isBtnActive && styles["active-btn"]
           }`}
-          onClick={handleDropdown}
+          href="/"
         >
-          <Link href="/">Home</Link>
-        </button>
-        <button
-          className={`${styles["dropdown-list__btn"]} ${
-            !isBtnActive ? styles["active-btn"] : ""
+          <button
+            className={styles["dropdown-list__btn"]}
+            onClick={handleDropdown}
+          >
+            Home
+          </button>
+        </Link>
+        <Link
+          className={`${styles["dropdown-list__link"]} ${
+            !isBtnActive && styles["active-btn"]
           }`}
-          onClick={handleDropdown}
+          href="/about"
         >
-          <Link href="/about">About</Link>
-        </button>
+          <button
+            className={styles["dropdown-list__btn"]}
+            onClick={handleDropdown}
+          >
+            About
+          </button>
+        </Link>
       </div>
     </>
   );
