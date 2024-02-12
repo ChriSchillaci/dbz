@@ -1,10 +1,6 @@
-import {
-  FaFacebook,
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+
+import { FaXTwitter } from "react-icons/fa6";
 
 export const socialIcons = [
   {
@@ -20,7 +16,7 @@ export const socialIcons = [
     link: "/",
   },
   {
-    icon: <FaTwitter />,
+    icon: <FaXTwitter />,
     link: "/",
   },
   {
