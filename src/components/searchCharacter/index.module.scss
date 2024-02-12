@@ -17,7 +17,7 @@
   }
 
   &-input {
-    width: 93%;
+    width: 100%;
     height: 100%;
     border: none;
     font-size: 20px;
@@ -37,6 +37,18 @@
     width: 7%;
     background-color: #d9d9d9;
     border-radius: 0 4px 4px 0;
+
+    @include mixins.breakpoint(laptop) {
+      width: 10%;
+    }
+
+    @include mixins.breakpoint(tablet) {
+      width: 13%;
+    }
+
+    @include mixins.breakpoint(mobile) {
+      width: 23%;
+    }
 
     .search-icon {
       font-size: 43px;
