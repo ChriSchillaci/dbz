@@ -36,7 +36,7 @@ click the page buttons in order to see a different list of character;
 click either on the character's image, which leads the user to the detail page of that character, or on the names located at the bottom of the page.
 </li>
 <br>
-<div style='display: flex; justify-content: center'>
+<div style='display: flex; justify-content: center' align='center'>
 <img src='./public/images/screenshot-homepage.jpeg' width='280' />
 </div>
 <br>
@@ -44,20 +44,20 @@ click either on the character's image, which leads the user to the detail page o
 
 On the detail page, the user can see the character's info such as stats, description, place of birth and transformations(they may not have transformations).
 
-<div style='display: flex; justify-content: center'>
+<div style='display: flex; justify-content: center' align='center'>
 <img src='./public/images/screenshot-detailpage.jpeg' width='280'/>
 </div>
 <br>
 On the about page, the user can see an developer's introduction and its technologies used during development.
 <br>
 
-<div style='display: flex; justify-content: center'>
+<div style='display: flex; justify-content: center' align='center'>
 <img src='./public/images/screenshot-aboutpage.jpeg' width='280'>
 </div>
 <br>
 And last but not least, the page 404 is shown if the user were to visit a page that does not exist.
 <br>
-<div style='display: flex; justify-content: center' >
+<div style='display: flex; justify-content: center' align='center' >
 <img src='./public/images/screenshot-404.jpeg' width='280'>
 </div>
 
