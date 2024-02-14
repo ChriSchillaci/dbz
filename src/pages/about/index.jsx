@@ -13,7 +13,7 @@ export default function About() {
       <div className={styles["layout-bg-about-wrapper"]}>
         <img
           className={styles["layout-bg-about"]}
-          src="https://s3-alpha-sig.figma.com/img/7086/482e/9bd4270feae9de9be1ceda77b9afe183?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SMMTAV1fZjM3JhUlea-pDuTJ--EtvPP0U7JBYbHu7YNwz7Lx1bnO4Odec47Gm0gSyVx51Rs8qiyeHIufGbBDh-ykt1UuYjT7MYQVtVVgHtQ7bJDI8sz8VDQXqYEmT4XBLCmly0R6HmGMSz5ftstyWlP7mYy-rURh3ZsoJuMP7yTJY98lZ3zmEieWCsxfOWAQYdiKl2-LtoFphJK~qMPyJ5EvshRcjEJOpPUCFNMKlHDeR1GLQyGxzImzF6Vl~9vaWyGQmDoX~torbu6AhMGDBQJCruQSF84I4sViO01albBytl5tZpT8uLBL~FQC8sL46q9GcE1szyQXEUzyDjD3Ww__"
+          src="/images/bg-characters.jfif"
           alt=""
         />
       </div>
@@ -77,7 +77,7 @@ export default function About() {
         <section className={styles.intro}>
           <h1 className={styles["intro-title"]}>About the project</h1>
           <p className={styles["intro-api"]}>
-            You can find the API I used in the following url:{" "}
+            You can find the API I used at the following url:{" "}
             <Link href="https://web.dragonball-api.com/">
               https://web.dragonball-api.com/
             </Link>
