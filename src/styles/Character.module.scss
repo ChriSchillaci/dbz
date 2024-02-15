@@ -64,6 +64,13 @@
 
 .info-wrapper {
   max-width: 1400px;
-  margin: 0 auto;
-  padding-inline: 20px;
+  padding-inline: 40px;
+
+  @include mixins.breakpoint(tablet) {
+    padding-inline: 20px;
+  }
+
+  @include mixins.breakpoint(mobile) {
+    padding-inline: 20px;
+  }
 }
