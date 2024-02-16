@@ -1,6 +1,6 @@
 @use "../../assets/scss/mixins";
 
 .CharList {
-  @include mixins.flex(row, space-between, flex-start, 47px 16px);
+  @include mixins.flex(row, flex-start, flex-start, 47px 16px);
   flex-wrap: wrap;
 }

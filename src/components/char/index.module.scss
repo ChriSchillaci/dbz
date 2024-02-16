@@ -5,12 +5,25 @@
   position: relative;
   min-width: 320px;
   height: 232.837px;
-  flex: 1;
+  flex-grow: 0;
+  flex-basis: calc(33% - 7px);
   background: linear-gradient(180deg, #fcbd42 20.83%, #e76b24 100%);
   cursor: pointer;
   overflow: hidden;
   border-radius: 4px;
   transition: all 0.3s ease-out;
+
+  @media (max-width: 1177px) {
+    flex-basis: calc(50% - 9px);
+  }
+
+  @include mixins.breakpoint(tablet) {
+    flex-grow: 1;
+  }
+
+  @include mixins.breakpoint(mobile) {
+    flex-grow: 1;
+  }
 
   &-img {
     position: absolute;
