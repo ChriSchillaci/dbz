@@ -65,6 +65,7 @@
 .info-wrapper {
   max-width: 1400px;
   padding-inline: 40px;
+  margin: 0 auto;
 
   @include mixins.breakpoint(tablet) {
     padding-inline: 20px;
