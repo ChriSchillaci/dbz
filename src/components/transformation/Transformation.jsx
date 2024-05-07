@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./index.module.scss";
@@ -36,10 +37,13 @@ const Transformation = ({ charData }) => {
                 id={transformation.id}
                 className={styles["transformation-card"]}
               >
-                <img
+                <Image
                   className={styles["transformation-img"]}
                   src={transformation.image}
                   alt={transformation.name}
+                  height={1080}
+                  width={1920}
+                  quality={80}
                 />
                 <p className={styles["transformation-name"]}>
                   {transformation.name}

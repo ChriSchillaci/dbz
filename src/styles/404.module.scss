@@ -41,6 +41,15 @@
       .cloud-img {
         position: relative;
         z-index: 1;
+        height: 216px;
+
+        @include mixins.breakpoint(tablet) {
+          height: 162px;
+        }
+
+        @include mixins.breakpoint(mobile) {
+          height: 135px;
+        }
       }
     }
   }
@@ -72,13 +81,3 @@
     transform: translateY(0);
   }
 }
-
-// @include mixins.breakpoint(tablet) {
-//   .img-wrapper {
-//     width: 300px !important;
-//     .error-number {
-//       font-size: 127px !important;
-//       transform: rotate(10deg) translateY(-100px) translateX(1px) !important;
-//     }
-//   }
-// }

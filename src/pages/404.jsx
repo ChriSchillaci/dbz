@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/404.module.scss";
 
 export default function NotFound() {
@@ -12,10 +13,13 @@ export default function NotFound() {
         <div className={styles["error-wrapper"]}>
           <div className={styles["img-wrapper"]}>
             <h1 className={styles["error-number"]}>404</h1>
-            <img
+            <Image
               className={styles["cloud-img"]}
               src="/images/cloud.png"
               alt="cloud"
+              height={216}
+              width={400}
+              quality={80}
             />
           </div>
           <div className={styles["error-text-wrapper"]}>

@@ -1,6 +1,7 @@
 import CharInfo from "@/components/charInfo";
 import Transformation from "@/components/transformation";
 import Head from "next/head";
+import Image from "next/image";
 import { RiTeamFill } from "react-icons/ri";
 import { GiAura, GiBeamsAura } from "react-icons/gi";
 import styles from "../../styles/Character.module.scss";
@@ -33,11 +34,20 @@ export default function Character({ charData }) {
         <title>{charData.name}</title>
       </Head>
       <div className={styles["char-container"]}>
-        <img className={styles["bg-img"]} src="/images/bg-stage.png" />
-        <img
+        <Image
+          className={styles["bg-img"]}
+          src="/images/bg-stage.png"
+          height={1080}
+          width={1920}
+          quality={80}
+        />
+        <Image
           className={styles["char-img"]}
           src={charData.image}
           alt={charData.name}
+          height={1080}
+          width={1920}
+          quality={80}
         />
         <ul className={styles.stats}>
           <li className={styles["stat-wrapper"]}>
