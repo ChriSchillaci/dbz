@@ -1,6 +1,7 @@
 import styles from "./index.module.scss";
+import { CharData } from "@/types/charTypes";
 
-const CharInfo = ({ charData }) => {
+const CharInfo = ({ charData }: { charData: CharData }) => {
   return (
     <section className={styles["char-sect"]}>
       <div className={styles["char-info"]}>

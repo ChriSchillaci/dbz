@@ -3,8 +3,9 @@ import Link from "next/link";
 import { MdMenu } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import styles from "./index.module.scss";
+import { NavbarProps } from "@/types/charTypes";
 
-const Navbar = ({ isBtnActive, currentPage }) => {
+const Navbar = ({ isBtnActive, currentPage }: NavbarProps) => {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
   useEffect(() => {

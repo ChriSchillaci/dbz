@@ -4,9 +4,11 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./index.module.scss";
+import { CharData } from "@/types/charTypes";
 
-const Transformation = ({ charData }) => {
+const Transformation = ({ charData }: { charData: CharData }) => {
   const { transformations } = charData;
+
   return (
     <section className={styles.Transformation}>
       <h1 className={styles["Transformation__title"]}>Transformation</h1>

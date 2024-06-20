@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { socialIcons } from "@/mocks/social-icons";
 import styles from "./index.module.scss";
+import { CharDataItems, CharType } from "@/types/charTypes";
 
 const Footer = () => {
-  const [charName, setCharName] = useState([]);
+  const [charName, setCharName] = useState<CharType[]>([]);
   useEffect(() => {
     fetch("https://dragonball-api.com/api/characters?limit=58")
       .then((res) => res.json())
-      .then((data) => setCharName(data.items));
+      .then((data: CharDataItems<CharType[]>) => setCharName(data.items));
   }, []);
 
   return (

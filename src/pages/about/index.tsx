@@ -87,7 +87,8 @@ export default function About() {
           <ul className={styles["intro-list"]}>
             <li>HTML5</li>
             <li>Sass</li>
-            <li>Javascript</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
             <li>Next.js</li>
           </ul>
           <p>The libraries:</p>

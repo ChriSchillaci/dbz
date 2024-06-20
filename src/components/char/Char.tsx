@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./index.module.scss";
+import { CharData } from "@/types/charTypes";
 
-const Char = ({ char }) => {
+const Char = ({ char }: { char: CharData }) => {
   return (
     <li className={styles.Char} id={char.id}>
       <Link href={`character/${char.id}`}>

@@ -16,6 +16,10 @@ export const languageIcons = [
     alt: "JS",
   },
   {
+    link: "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
+    alt: "TS",
+  },
+  {
     link: "https://pluspng.com/img-png/react-logo-png-img-react-logo-png-react-js-logo-png-transparent-png-1142x1027.png",
     alt: "REACT",
   },
